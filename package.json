@@ -1,6 +1,6 @@
 {
   "name": "plain-cards",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A simple library for representing a deck of playing cards.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

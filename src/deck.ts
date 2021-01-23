@@ -2,7 +2,7 @@ import { Card } from "./card";
 import { Suit, Value } from "./enums";
 
 export class Deck {
-	/** Cards in deck (internal) */
+	/** Cards in deck */
 	cards: Card[];
 
 	/** Create cards for new deck */
@@ -79,5 +79,15 @@ export class Deck {
 		const [card] = this.cards.slice(count - 1, count);
 
 		return card;
-	};
+    };
+    
+    /** Cut the deck at certain place */
+    cut = (count: number): Card[] => {
+        const topPile = this.cards.slice(0, count);
+        const bottomPile = this.cards.slice(count);
+
+        this.cards = [...bottomPile, ...topPile];
+
+        return this.cards;
+    }
 }

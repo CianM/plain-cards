@@ -161,3 +161,17 @@ describe("Remaining cards", () => {
 		expect(deck.size).toBe(51);
 	});
 });
+
+describe("Cut deck", () => {
+	it("should split the deck and move the bottom pile to the top", () => {
+		const deck = new Deck();
+
+		// Get next card after split
+		const card = deck.cards[20];
+
+		deck.cut(20);
+
+		// Card after cut will now be on top
+		expect(deck.cards[0]).toEqual(card);
+	})
+})
