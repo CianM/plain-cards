@@ -1,7 +1,5 @@
 import { Deck } from "./deck";
 
-export {
-    Deck
-}
+export { Deck };
 
 export default Deck;
