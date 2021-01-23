@@ -25,15 +25,14 @@ export class Deck {
 	};
 
 	constructor() {
-        this.cards = this.generateCards();
+		this.cards = this.generateCards();
 		this.shuffle();
-    }
-    
+	}
 
-    /** The number of cards remaining in the deck. */
-    get size(): number {
-        return this.cards.length;
-    }
+	/** The number of cards remaining in the deck. */
+	get size(): number {
+		return this.cards.length;
+	}
 
 	/**
 	 * Shuffle the cards array using the Knuth shuffle algorithm.
@@ -66,19 +65,19 @@ export class Deck {
 	 */
 	draw = (count = 1): Card[] => {
 		return this.cards.splice(0, count);
-    };
-    
-    /**
-     * Returns a single card from the top of the deck or at a given place in the deck.
-     * _Note:_ Unlike `draw` this does not remove the card from the deck.
-     */
-    peek = (count = 1): Card | undefined => {
-        if(count > this.cards.length) {
-            return;
-        }
+	};
 
-        const [card] = this.cards.slice(count - 1, count);
+	/**
+	 * Returns a single card from the top of the deck or at a given place in the deck.
+	 * _Note:_ Unlike `draw` this does not remove the card from the deck.
+	 */
+	peek = (count = 1): Card | undefined => {
+		if (count > this.cards.length) {
+			return;
+		}
 
-        return card;
-    }
+		const [card] = this.cards.slice(count - 1, count);
+
+		return card;
+	};
 }
