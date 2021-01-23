@@ -79,15 +79,15 @@ export class Deck {
 		const [card] = this.cards.slice(count - 1, count);
 
 		return card;
-    };
-    
-    /** Cut the deck at certain place */
-    cut = (count: number): Card[] => {
-        const topPile = this.cards.slice(0, count);
-        const bottomPile = this.cards.slice(count);
+	};
 
-        this.cards = [...bottomPile, ...topPile];
+	/** Cut the deck at certain place */
+	cut = (count: number): Card[] => {
+		const topPile = this.cards.slice(0, count);
+		const bottomPile = this.cards.slice(count);
 
-        return this.cards;
-    }
+		this.cards = [...bottomPile, ...topPile];
+
+		return this.cards;
+	};
 }

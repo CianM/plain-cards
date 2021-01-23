@@ -173,5 +173,5 @@ describe("Cut deck", () => {
 
 		// Card after cut will now be on top
 		expect(deck.cards[0]).toEqual(card);
-	})
-})
+	});
+});
