@@ -1,1 +1,7 @@
-export const Greeter = (name: string) => `Hello ${name}`;
+import { Deck } from "./deck";
+
+export {
+    Deck
+}
+
+export default Deck;
